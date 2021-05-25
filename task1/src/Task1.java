@@ -18,7 +18,8 @@ public class Task1 {
         );
 
         // Filtrar a lista, e obter apenas as string que começam por 'A'
-        List<String> filtered = filterStrings(strings, s -> s.startsWith("A"));
-        System.out.println(filtered);
+        System.out.println(filterStrings(strings, s -> s.startsWith("A")));
+        System.out.println(filterStrings(strings, string -> string.length() > 10));
+        System.out.println(filterStrings(strings, string -> string.split(" ").length > 8));
     }
 }
