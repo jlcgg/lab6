@@ -24,6 +24,11 @@ class StudentRecord {
     public int getGrade() {
         return grade;
     }
+
+    @Override
+    public String toString() {
+        return this.getNumber() + " " + this.getName();
+    }
 }
 
 public class Task2 {
@@ -37,6 +42,7 @@ public class Task2 {
                 new StudentRecord("6", "Jack", 7)
         );
 //        records.forEach(studentRecord -> System.out.println(studentRecord.getNumber() + " " + studentRecord.getGrade()));
-        records.stream().filter(x -> x.getGrade() < 10).forEach(x -> System.out.println(x.getNumber() + " "+x.getName()));
+//        records.stream().filter(x -> x.getGrade() < 10).forEach(x -> System.out.println(x.getNumber() + " "+x.getName()));
+        records.stream().filter(x -> x.getGrade() < 10).forEach(System.out::println);
     }
 }
