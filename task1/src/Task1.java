@@ -14,17 +14,7 @@ class StartsWithA implements Predicate<String> {
 
 public class Task1 {
     public static List<String> filterStrings(List<String> strings, Predicate<String> predicate) {
-//        List<String> result = new ArrayList<>();
-//        for(String s : strings){
-//            if(predicate.test(s)) {
-//                result.add(s);
-//            }
-//        }
-//        return result;
-
-        Stream<String> stringStream = strings.stream().filter(predicate);
-        List<String> result = stringStream.collect(Collectors.toList());
-        return result;
+        return strings.stream().filter(predicate).collect(Collectors.toList());
     }
 
     public static void main(String[] args) {
