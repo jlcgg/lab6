@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -42,5 +43,12 @@ public class Task2 {
                 new StudentRecord("4", "Anna", 12),
                 new StudentRecord("5", "James", 15)
         );
+
+        StudentRecordPrint studentRecordPrint = new StudentRecordPrint();
+        Iterator<StudentRecord> iterator = records.iterator();
+        while(iterator.hasNext()) {
+            StudentRecord studentRecord = iterator.next();
+            studentRecordPrint.accept(studentRecord);
+        }
     }
 }
