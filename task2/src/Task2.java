@@ -41,7 +41,7 @@ public class Task2 {
                 new StudentRecord("5", "James", 15),
                 new StudentRecord("6", "Jack", 7)
         );
-//        records.forEach(studentRecord -> System.out.println(studentRecord.getNumber() + " " + studentRecord.getGrade()));
+        records.forEach(studentRecord -> System.out.println(studentRecord.getNumber() + " " + studentRecord.getGrade()));
 //        records.stream().filter(x -> x.getGrade() < 10).forEach(x -> System.out.println(x.getNumber() + " "+x.getName()));
         records.stream().filter(x -> x.getGrade() < 10).forEach(System.out::println);
     }
