@@ -6,9 +6,7 @@ import java.util.List;
 public class Task1 {
     public static List<String> filter(List<String> strings){
         List<String> result = new ArrayList<>();
-        Iterator<String> iterator = strings.iterator();
-        while(iterator.hasNext()){
-            String s = iterator.next();
+        for(String s : strings){
             if(s.startsWith("A")) {
                 result.add(s);
             }
