@@ -45,10 +45,11 @@ public class Task2 {
         );
 
         StudentRecordPrint studentRecordPrint = new StudentRecordPrint();
-        Iterator<StudentRecord> iterator = records.iterator();
-        while(iterator.hasNext()) {
-            StudentRecord studentRecord = iterator.next();
-            studentRecordPrint.accept(studentRecord);
-        }
+//        Iterator<StudentRecord> iterator = records.iterator();
+//        while(iterator.hasNext()) {
+//            StudentRecord studentRecord = iterator.next();
+//            studentRecordPrint.accept(studentRecord);
+//        }
+        records.forEach(studentRecordPrint);
     }
 }
