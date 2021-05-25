@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -45,8 +44,6 @@ public class Task2 {
         );
 
         StudentRecordPrint studentRecordPrint = new StudentRecordPrint();
-        records.forEach((final StudentRecord studentRecord) -> {
-            System.out.println(studentRecord.getNumber() + " " + studentRecord.getGrade());
-        });
+        records.forEach(studentRecord -> System.out.println(studentRecord.getNumber() + " " + studentRecord.getGrade()));
     }
 }
