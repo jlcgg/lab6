@@ -26,13 +26,6 @@ class StudentRecord {
     }
 }
 
-class StudentRecordPrint implements Consumer<StudentRecord> {
-    @Override
-    public void accept(final StudentRecord studentRecord) {
-        System.out.println(studentRecord.getNumber() + " " + studentRecord.getGrade());
-    }
-}
-
 public class Task2 {
     public static void main(String[] args) {
         List<StudentRecord> records = Arrays.asList(
@@ -42,8 +35,6 @@ public class Task2 {
                 new StudentRecord("4", "Anna", 12),
                 new StudentRecord("5", "James", 15)
         );
-
-        StudentRecordPrint studentRecordPrint = new StudentRecordPrint();
         records.forEach(studentRecord -> System.out.println(studentRecord.getNumber() + " " + studentRecord.getGrade()));
     }
 }
