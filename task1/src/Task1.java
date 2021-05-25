@@ -33,8 +33,10 @@ public class Task1 {
                 filterStrings(strings,
                         s -> filterStrings(Arrays.asList(s.split(" ")),w -> w.length() >= 3).size() == s.split(" ").length));
 
-
         //- ii) *Strings* com um número par de letras `w` minúsculas.
-
+        // (s.length() - s.replace("w","").length()) = número de 'w' na string.
+        System.out.println(filterStrings(strings,
+                s -> (s.length() - s.replace("w","").length()) != 0 &&
+                        (s.length() - s.replace("w","").length()) % 2 == 0));
     }
 }
