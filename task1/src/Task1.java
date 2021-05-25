@@ -1,13 +1,20 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
+import java.util.function.Predicate;
+
+class StartsWithA implements Predicate<String> {
+    @Override
+    public boolean test(final String s) {
+        return s.startsWith("A");
+    }
+}
 
 public class Task1 {
-    public static List<String> filter(List<String> strings){
+    public static List<String> filterStrings(List<String> strings, Predicate<String> predicate) {
         List<String> result = new ArrayList<>();
         for(String s : strings){
-            if(s.startsWith("A")) {
+            if(predicate.test(s)) {
                 result.add(s);
             }
         }
@@ -24,7 +31,8 @@ public class Task1 {
         );
 
         // Filtrar a lista, e obter apenas as string que começam por 'A'
-        List<String> filtered = filter(strings);
+        Predicate<String> predicate = new StartsWithA();
+        List<String> filtered = filterStrings(strings, predicate);
         System.out.println(filtered);
     }
 }
