@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 class StudentRecord {
     private final String number;
@@ -22,6 +23,13 @@ class StudentRecord {
 
     public int getGrade() {
         return grade;
+    }
+}
+
+class StudentRecordPrint implements Consumer<StudentRecord> {
+    @Override
+    public void accept(final StudentRecord studentRecord) {
+        System.out.println(studentRecord.getNumber() + " " + studentRecord.getGrade());
     }
 }
 
