@@ -20,7 +20,7 @@ Além das intefaces funcionais, Java permite interagir com iteradores de coleç�
 ## Tarefas
 
 ## Tarefa 1
-Defina um método estático `List<String> filterStrings(List<String> strings, Predicate<String> predicate)`, que seleciona *strings* de uma lista de acordo com um predicato, e retorna uma lista com a seleção.
+Defina um método estático `List<String> filterStrings(List<String> strings, Predicate<String> predicate)`, que seleciona *strings* de uma lista de acordo com um predicado, e retorna uma lista com a seleção.
 
 Utilize a seguinte lista de *string*:
 
@@ -38,7 +38,7 @@ a) Teste o método com os seguintes predicados:
 
 - i) `string -> string.startsWith("A")`
 - ii) `string -> string.length() > 10`
-- iii) `strings, string -> string.split(" ").length > 8)`
+- iii) `strings, string -> string.split(" ").length > 8`
 
 b) Defina e teste os seguintes predicados:
 
