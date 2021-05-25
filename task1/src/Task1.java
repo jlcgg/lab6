@@ -21,5 +21,20 @@ public class Task1 {
         System.out.println(filterStrings(strings, s -> s.startsWith("A")));
         System.out.println(filterStrings(strings, string -> string.length() > 10));
         System.out.println(filterStrings(strings, string -> string.split(" ").length > 8));
+
+        //- i) Strings com todas as palavras com 3 ou mais letras;
+        // Lista de frases, cuja lista de palavras com tamanho menor que 3 letras é vazia.
+        System.out.println(
+                filterStrings(strings,
+                        s -> filterStrings(Arrays.asList(s.split(" ")),w -> w.length() < 3).isEmpty()));
+
+        // Lista de frases, cuja lista de palavras com tamanho maior ou igual a 3 é igual é lista total de palavras da frase.
+        System.out.println(
+                filterStrings(strings,
+                        s -> filterStrings(Arrays.asList(s.split(" ")),w -> w.length() >= 3).size() == s.split(" ").length));
+
+
+        //- ii) *Strings* com um número par de letras `w` minúsculas.
+
     }
 }
